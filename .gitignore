@@ -217,9 +217,9 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 
-# Project secrets — never upload these
+# Project secrets
+election.db
 passwords.txt
-config.py
 
 # macOS Finder metadata
 .DS_Store
