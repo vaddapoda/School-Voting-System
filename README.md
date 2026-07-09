@@ -82,12 +82,20 @@ Any data used for testing or demonstration should be fictional.
   <img src="screenshots/admin-panel.png" width="700">
 </p>
 
-### Winners
+## Winners
 
-<p align="center">
-  <img src="screenshots/winners-printable.png" width="49%">
-  <img src="screenshots/winners-table.png" width="49%">
-</p>
+<table>
+  <tr>
+    <td align="center">
+      <b>Printable Winners View</b><br><br>
+      <img src="screenshots/winners-printable.png" width="500">
+    </td>
+    <td align="center">
+      <b>Table Winners View</b><br><br>
+      <img src="screenshots/winners-table.png" width="500">
+    </td>
+  </tr>
+</table>
 
 ## Author
 
