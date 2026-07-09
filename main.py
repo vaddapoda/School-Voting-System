@@ -844,8 +844,7 @@ style.configure("Small.TButton", font=("Arial", 16, "bold"), padding=10)
 menu_frame = ttk.Frame(window)
 menu_frame.pack(fill="both", expand="yes")
 
-ttk.Label(menu_frame, text="PSBB LEARNING LEADERSHIP ACADEMY\nSTUDENT COUNCIL ELECTIONS", font=("Arial", 60, "bold"), justify='center').place(relx=0.5, rely=0.2,
-                                                                                        anchor="center")
+ttk.Label(menu_frame, text="STUDENT COUNCIL ELECTIONS", font=("Arial", 60, "bold"), justify='center').place(relx=0.5, rely=0.3,anchor="center")
 ttk.Button(menu_frame, text="ADMIN", command=show_login, style='Formal.TButton').place(relx=0.5, rely=0.55, anchor="center")
 ttk.Button(menu_frame, text="VOTING", command=show_voting, style='Formal.TButton').place(relx=0.5, rely=0.7, anchor="center")
 ttk.Button(menu_frame, text='EXIT', command=lambda: window.destroy(), style='Formal.TButton').place(relx=0.5, rely=0.85, anchor="center")
@@ -860,8 +859,7 @@ ttk.Button(login_frame, text="Back", command=show_menu, style='Formal.TButton').
 
 admin_frame = ttk.Frame(window)
 
-ttk.Label(admin_frame, text="What do you want to do?", font=("Arial", 35, "bold")).place(relx=0.5, rely=0.17,
-                                                                                         anchor="center")
+ttk.Label(admin_frame, text="What do you want to do?", font=("Arial", 35, "bold")).place(relx=0.5, rely=0.17,anchor="center")
 ttk.Button(admin_frame, text="View Voters", command=show_voters, style='Formal.TButton').place(relx=0.5, rely=0.31, anchor="center")
 ttk.Button(admin_frame, text="View Candidates", command=show_nominees, style='Formal.TButton').place(relx=0.5, rely=0.43, anchor="center")
 ttk.Button(admin_frame, text="View Winners", command=show_winners, style='Formal.TButton').place(relx=0.5, rely=0.55, anchor="center")
