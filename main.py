@@ -825,20 +825,98 @@ def voting():
 
 
 window = tk.Tk()
+window.configure(background="#F4F7FB")
 window.title("LLA STUDENT COUNCIL ELECTIONS")
 window.attributes('-fullscreen', True)
 
 
 style = ttk.Style()
-style.theme_use('clam')
-style.configure("TLabel", font=("Arial", 25))
-style.configure("TButton", font=("Arial", 25))
-style.configure("Formal.TButton", font=("Arial", 30, "bold"), padding=20)
-style.configure("Formal.TRadiobutton", font=("Arial", 30), padding=10)
-style.configure("TCombobox", font=("Arial", 25))
-style.configure("Treeview", rowheight=30, font=("Arial", 16))
-style.configure("Treeview.Heading", font=("Arial", 18, "bold"))
-style.configure("Small.TButton", font=("Arial", 16, "bold"), padding=10)
+style.theme_use("clam")
+
+# Overall background
+style.configure("TFrame", background="#F4F7FB")
+style.configure("TLabel", font=("Arial", 25), background="#F4F7FB", foreground="#1F2937")
+
+# Standard buttons
+style.configure(
+    "TButton",
+    font=("Arial", 25, "bold"),
+    padding=(14, 10),
+    background="#E5E7EB",
+    foreground="#1F2937",
+    borderwidth=0,
+    relief="flat"
+)
+style.map(
+    "TButton",
+    background=[("active", "#D1D5DB"), ("pressed", "#C7CDD6")]
+)
+
+# Large menu/admin buttons
+style.configure(
+    "Formal.TButton",
+    font=("Arial", 30, "bold"),
+    padding=20,
+    background="#2563EB",
+    foreground="white",
+    borderwidth=0,
+    relief="flat"
+)
+style.map(
+    "Formal.TButton",
+    background=[("active", "#1D4ED8"), ("pressed", "#1E40AF")]
+)
+
+# Voting candidate options
+style.configure(
+    "Formal.TRadiobutton",
+    font=("Arial", 30),
+    padding=10,
+    background="#F4F7FB",
+    foreground="#1F2937"
+)
+
+# Dropdowns
+style.configure(
+    "TCombobox",
+    font=("Arial", 25),
+    padding=8,
+    fieldbackground="white",
+    background="white",
+    foreground="#1F2937"
+)
+
+# Tables
+style.configure(
+    "Treeview",
+    rowheight=36,
+    font=("Arial", 16),
+    background="white",
+    fieldbackground="white",
+    foreground="#1F2937"
+)
+style.configure(
+    "Treeview.Heading",
+    font=("Arial", 18, "bold"),
+    background="#1E3A8A",
+    foreground="white",
+    relief="flat"
+)
+style.map(
+    "Treeview",
+    background=[("selected", "#BFDBFE")],
+    foreground=[("selected", "#1E3A8A")]
+)
+
+# Smaller back buttons
+style.configure(
+    "Small.TButton",
+    font=("Arial", 16, "bold"),
+    padding=10,
+    background="#E5E7EB",
+    foreground="#1F2937",
+    borderwidth=0
+)
 
 
 menu_frame = ttk.Frame(window)
