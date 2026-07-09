@@ -54,7 +54,7 @@ def show_login():
 
 def show_voting():
     menu_frame.pack_forget()
-    window.title("LLA STUDENT COUNCIL ELECTIONS")
+    window.title("STUDENT COUNCIL ELECTIONS")
     ask_class()
 
 def show_voters():
@@ -83,7 +83,7 @@ def show_menu():
     for frame in (login_frame, admin_frame, voting_frame, details_frame):
         frame.pack_forget()
     menu_frame.pack(fill="both", expand="yes")
-    window.title("LLA STUDENT COUNCIL ELECTIONS")
+    window.title("STUDENT COUNCIL ELECTIONS")
 
 def back_menu():
     for frame in (voters_frame, nominee_frame, winners_table_frame):
@@ -738,7 +738,7 @@ def voting():
                 for widget in voting_frame.winfo_children():
                     widget.destroy()
                 voting_frame.pack_forget()
-                window.title("LLA STUDENT COUNCIL ELECTIONS")
+                window.title("STUDENT COUNCIL ELECTIONS")
                 ask_class()
 
             def exit_voting():
@@ -826,7 +826,7 @@ def voting():
 
 window = tk.Tk()
 window.configure(background="#F4F7FB")
-window.title("LLA STUDENT COUNCIL ELECTIONS")
+window.title("STUDENT COUNCIL ELECTIONS")
 window.attributes('-fullscreen', True)
 
 
