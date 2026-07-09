@@ -31,7 +31,6 @@ The application helps manage student council elections by handling voters, nomin
 School-Voting-System/
 ├── main.py
 ├── passwords.txt
-├── .gitignore
 └── README.md
 ```
 
@@ -71,14 +70,24 @@ Any data used for testing or demonstration should be fictional.
 
 ## Screenshots
 
-Screenshots can be added here later.
+### Main Menu
 
-```md
-![Main Menu](screenshots/main-menu.png)
-![Admin Panel](screenshots/admin-panel.png)
-![Winners Table](screenshots/winners-table.png)
-![Winners Table](screenshots/winners-table.png)
-```
+<p align="center">
+  <img src="screenshots/main-menu.png" width="700">
+</p>
+
+### Admin Panel
+
+<p align="center">
+  <img src="screenshots/admin-panel.png" width="700">
+</p>
+
+### Winners
+
+<p align="center">
+  <img src="screenshots/winners-printable.png" width="49%">
+  <img src="screenshots/winners-table.png" width="49%">
+</p>
 
 ## Author
 
