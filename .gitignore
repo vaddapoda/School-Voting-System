@@ -217,9 +217,5 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 
-# Project secrets
-election.db
-passwords.txt
-
 # macOS Finder metadata
 .DS_Store
