@@ -31,6 +31,14 @@ The application helps manage student council elections by handling voters, nomin
 School-Voting-System/
 ├── main.py
 ├── passwords.txt
+├── sample_voters_large.csv
+├── screenshots/
+│   ├── main-menu.png
+│   ├── admin-panel.png
+│   ├── winners-printable.png
+│   └── winners-table.png
+│   └── voters-view.png
+│   └── candidates-view.png
 └── README.md
 ```
 
@@ -82,6 +90,18 @@ Any data used for testing or demonstration should be fictional.
   <img src="screenshots/admin-panel.png" width="700">
 </p>
 
+### Voters View
+
+<p align="center">
+  <img src="screenshots/voters-view.png" width="700">
+</p>
+
+### Candidates View
+
+<p align="center">
+  <img src="screenshots/candidates-view.png" width="700">
+</p>
+
 ## Winners
 
 <table>
@@ -99,4 +119,4 @@ Any data used for testing or demonstration should be fictional.
 
 ## Author
 
-Created by `Gautam A` as a Class 12 Computer Science project.
+Created by `Gautam A` and group as a Class 12 Computer Science project.
