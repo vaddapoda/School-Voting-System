@@ -1,8 +1,14 @@
 # Student Council Election Management System
 
-A desktop-based election management application built using Python and Tkinter as a Class 12 Computer Science project.
+A desktop-based School Voting System developed using Python and Tkinter as a Class 12 Computer Science project.
 
-The application helps manage student council elections by handling voters, nominees, voting, results, and CSV exports in one system.
+This project is designed to help school management conduct Student Council Elections in an easier, faster, and more secure way. It provides a complete election workflow for both administrators and students.
+
+Students can select their class, section, and name, view their house, and vote for their preferred candidates for school-level and house-level positions. The system prevents a student from voting more than once by maintaining their voting status.
+
+Administrators can manage voter and candidate records by adding, editing, deleting, filtering, and importing student details through CSV files. They can also clear vote counts, change the admin and exit passwords, view election winners in table or printable formats, and export winner details to a CSV file.
+
+The application uses Python with Tkinter and ttk for the graphical interface, SQLite for local data storage, and CSV files for importing voter data and exporting results. Passwords are stored as hashes in `passwords.txt` rather than as readable plain text.
 
 ## Features
 
