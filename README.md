@@ -110,18 +110,17 @@ Any data used for testing or demonstration should be fictional.
 
 ## Winners
 
-<table>
-  <tr>
-    <td align="center">
-      <b>Printable Winners View</b><br><br>
-      <img src="screenshots/winners-printable.png" width="500">
-    </td>
-    <td align="center">
-      <b>Table Winners View</b><br><br>
-      <img src="screenshots/winners-table.png" width="500">
-    </td>
-  </tr>
-</table>
+<div align="center">
+  <b>Printable Winners View</b><br><br>
+  <img src="screenshots/winners-printable.png" width="700">
+</div>
+
+<br>
+
+<div align="center">
+  <b>Table Winners View</b><br><br>
+  <img src="screenshots/winners-table.png" width="700">
+</div>
 
 ## Author
 
