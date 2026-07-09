@@ -216,3 +216,10 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Project secrets — never upload these
+passwords.txt
+config.py
+
+# macOS Finder metadata
+.DS_Store
