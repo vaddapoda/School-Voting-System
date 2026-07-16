@@ -4,6 +4,7 @@ import csv
 import hashlib
 from tkinter import ttk, messagebox, filedialog
 
+#Password
 def get_password():
     global password_admin, password_exit
     passwordsfile = open('passwords.txt', 'r')
@@ -42,11 +43,13 @@ def change_password():
     exit.place(relx=0.65, rely=0.6, anchor='center')
     ttk.Button(popup, text='Save', command=save, style='TButton').place(relx=.5, rely=.85, anchor='center')
 
+#Connecting to database
 con = sqlite3.connect('database.db')
 cursor = con.cursor()
 cursor.execute("CREATE TABLE IF NOT EXISTS student (USN_No char(20), Name char(100), Class int, Section char(1), House char(20), voted char(10) DEFAULT 'Not Voted')")
 cursor.execute("CREATE TABLE IF NOT EXISTS nominees (Name varchar(100), Position char(50), House char(20), Votecount int)")
 
+#Functions for tkinter
 def show_login():
     menu_frame.pack_forget()
     login_frame.pack(fill="both", expand="yes")
@@ -147,7 +150,6 @@ def show_winners_together():
 
                 writer.writerow([position, name, str(class_) + str(section), house, max_votes])
 
-            # Export house sections
             houses = ['Ruby', 'Sapphire', 'Topaz', 'Emerald']
             for h in houses:
                 writer.writerow([])
@@ -166,7 +168,6 @@ def show_winners_together():
 
                 writer.writerow(['House Captain', name, str(class_) + str(section), house, cap_votes])
 
-                # House Vice Captain
                 cursor.execute(
                     "SELECT Name, Votecount FROM nominees WHERE House = ? AND Position = 'House Vice Captain' "
                     "ORDER BY Votecount DESC LIMIT 1", (h,)
@@ -678,6 +679,7 @@ def show_house():
     ttk.Label(details_frame, text='{}'.format(distinct_house[0]), font=("Arial", 30)).place(relx=0.4, rely=0.65, anchor="center")
     ttk.Button(details_frame, text='Submit', command=voting, style="TButton").place(relx=0.7, rely=0.65, anchor="center")
 
+#Main voting logic
 def voting():
     for widget in details_frame.winfo_children():
         widget.destroy()
@@ -823,21 +825,19 @@ def voting():
 
     show_frame(0)
 
-
+#Initializing tkinter
 window = tk.Tk()
 window.configure(background="#F4F7FB")
 window.title("STUDENT COUNCIL ELECTIONS")
 window.attributes('-fullscreen', True)
 
-
+#Custom theme
 style = ttk.Style()
 style.theme_use("clam")
 
-# Overall background
 style.configure("TFrame", background="#F4F7FB")
 style.configure("TLabel", font=("Arial", 25), background="#F4F7FB", foreground="#1F2937")
 
-# Standard buttons
 style.configure(
     "TButton",
     font=("Arial", 25, "bold"),
@@ -852,7 +852,6 @@ style.map(
     background=[("active", "#D1D5DB"), ("pressed", "#C7CDD6")]
 )
 
-# Large menu/admin buttons
 style.configure(
     "Formal.TButton",
     font=("Arial", 30, "bold"),
@@ -867,7 +866,6 @@ style.map(
     background=[("active", "#1D4ED8"), ("pressed", "#1E40AF")]
 )
 
-# Voting candidate options
 style.configure(
     "Formal.TRadiobutton",
     font=("Arial", 30),
@@ -876,7 +874,6 @@ style.configure(
     foreground="#1F2937"
 )
 
-# Dropdowns
 style.configure(
     "TCombobox",
     font=("Arial", 25),
@@ -886,7 +883,6 @@ style.configure(
     foreground="#1F2937"
 )
 
-# Tables
 style.configure(
     "Treeview",
     rowheight=36,
@@ -908,7 +904,6 @@ style.map(
     foreground=[("selected", "#1E3A8A")]
 )
 
-# Smaller back buttons
 style.configure(
     "Small.TButton",
     font=("Arial", 16, "bold"),
@@ -918,7 +913,7 @@ style.configure(
     borderwidth=0
 )
 
-
+#Tkinter
 menu_frame = ttk.Frame(window)
 menu_frame.pack(fill="both", expand="yes")
 
