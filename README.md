@@ -122,6 +122,6 @@ Any data used for testing or demonstration should be fictional.
   <img src="screenshots/winners-table.png" width="700">
 </div>
 
-## Author
+## Developed by
 
-Created by `Gautam A` and group as a Class 12 Computer Science project.
+`Gautam A` and group as a Class 12 Computer Science project.
